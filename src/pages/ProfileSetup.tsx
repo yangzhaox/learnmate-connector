@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
 const ProfileSetup = () => {
@@ -42,6 +43,27 @@ const ProfileSetup = () => {
         <Card className="p-6">
           <h1 className="text-2xl font-bold text-center mb-8">Setup Your Profile</h1>
           <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="space-y-2">
+                <Label htmlFor="id">ID</Label>
+                <Input
+                  id="id"
+                  value="12345"
+                  readOnly
+                  className="bg-gray-50"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  value="John Doe"
+                  readOnly
+                  className="bg-gray-50"
+                />
+              </div>
+            </div>
+
             <div className="space-y-2">
               <Label>Programming Language</Label>
               <Select value={programmingLanguage} onValueChange={setProgrammingLanguage}>
