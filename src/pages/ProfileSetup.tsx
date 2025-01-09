@@ -65,7 +65,7 @@ const ProfileSetup = () => {
             </div>
 
             <div className="space-y-2">
-              <Label>Programming Language</Label>
+              <Label>Stack</Label>
               <Select value={programmingLanguage} onValueChange={setProgrammingLanguage}>
                 <SelectTrigger>
                   <SelectValue placeholder="Select a language" />
